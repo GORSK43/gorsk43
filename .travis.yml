@@ -10,7 +10,7 @@ script:
 deploy:
   provider: bitballoon
   site-id:
-    secure: <%= ENV['SITE_ID'] %>
+    secure: ENV['SITE_ID']
   access-token:
-    secure: <%= ENV['ACCESS_TOKEN'] %>
+    secure: ENV['ACCESS_TOKEN']
   local-dir: "_site/"
