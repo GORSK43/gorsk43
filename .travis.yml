@@ -1,8 +1,12 @@
 language: ruby
 rvm:
   - 2.2
+install: true
 script:
-  - bundle exec jekyll build
+  - gem install jekyll -v _3.4.3_ --no-ri --no-rdoc
+  - gem install minima
+  - gem install jekyll-feed
+  - jekyll build
 deploy:
   provider: bitballoon
   site-id:
