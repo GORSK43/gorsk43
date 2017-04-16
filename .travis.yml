@@ -2,7 +2,7 @@ language: ruby
 rvm:
   - 2.2
 script:
-  - jekyll build
+  - bundle exec jekyll build
 deploy:
   provider: bitballoon
   site-id:
