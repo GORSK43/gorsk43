@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.2
+gemfile: Gemfile
+script:
+  - bundle install
+  - bundle exec jekyll build
+deploy:
+  provider: bitballoon
+  site-id:
+    secure: <%= ENV['SITE_ID'] %>
+  access-token:
+    secure: <%= ENV['ACCESS_TOKEN'] %>
+  local-dir: "_site/"
