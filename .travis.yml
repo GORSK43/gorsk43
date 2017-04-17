@@ -10,7 +10,7 @@ script:
   - gem install jekyll-tagging-related_posts
   - gem install i18n
   - jekyll build
-  - bitballoon deploy ./_site --site-id $ENV['SITE_ID']
+  - bitballoon deploy ./_site --site-id $SITE_ID --access-token $ACCESS_TOKEN
 # deploy:
 #  skip_cleanup: true
 #  provider: bitballoon
