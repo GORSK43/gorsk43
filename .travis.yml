@@ -4,9 +4,11 @@ rvm:
 install: true
 script:
   - gem install jekyll -v 3.4.3 --no-ri --no-rdoc
-  - gem install minima
   - gem install jekyll-feed
   - gem install bitballoon
+  - gem install jekyll-feed
+  - gem install jekyll-tagging-related_posts
+  - gem install i18n
   - jekyll build
   - bitballoon deploy ./_site --site-id $ENV['SITE_ID']
 # deploy:

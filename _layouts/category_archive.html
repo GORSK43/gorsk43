@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gorsky site | По категории</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/milligram.css">
+</head>
+
+<body>
+    <header class="primary-bg">
+        <div class="container">
+            <div class="row">
+                <div class="column column-50">
+                    <h1 class="shadow_text">Горский дом</h1>
+                </div>
+                <div class="column column-50">
+                    <a href="#">самое важное</a>
+                    <a href="#">итоги голосований</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <h3 class="page-heading">Ещё в категории {{ page.category }}</h3>
+        <ul class="">
+            {{ content }}
+        </ul>
+    </div>
+    {% include footer.html class-bg="primary-bg" %}
+</body>
+
+</html>
