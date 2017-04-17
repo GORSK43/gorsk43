@@ -8,7 +8,7 @@ script:
   - gem install jekyll-feed
   - gem install bitballoon
   - jekyll build
-  - bitballoon deploy ./_site --site-id "$SITE_ID"
+  - bitballoon deploy ./_site --site-id $SITE_ID --access-token $ACCESS_TOKEN
 # deploy:
 #  skip_cleanup: true
 #  provider: bitballoon
