@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "YMAKS Welcome to Jekyll!"
 date:   2017-04-16 21:42:18 +0700
 categories: news

@@ -1,62 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gorsky site</title>
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-    <!-- CSS Reset -->
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/milligram.css">
-</head>
-
-<body>
-    <header class="{{ page.class-bg }}">
-        <div class="container">
-            <div class="row">
-                <div class="column column-50">
-                    <h1 class="shadow_text">Горский дом</h1>
-                </div>
-                <div class="column column-50">
-                    <a href="#">самое важное</a>
-                    <a href="#">итоги голосований</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div id="wrapper-post" class="container">
-      <h3>{{ page.title }}</h3>
-      <div class="date-only">
-          {{ page.date | date_to_long_string }}
-          {% if page.categories %}&nbsp;|&nbsp;
-          Категории:
-          {% for cat in page.categories %}
-          <span>
+---
+layout: default
+---
+<div class="wrapper-post">
+    <h3>{{ page.title }}</h3>
+    <div class="date-only">
+        {{ page.date | localize: "%d %B %Y" }} {% if page.categories %}&nbsp;|&nbsp; Категории: {% for cat in page.categories %}
+        <span>
           {% categorylink cat %}
           {{ cat }}
           {% endcategorylink %}
-          </span>
-          {% endfor %} {% endif %} </div>
-        {{ content }}
-        <a href="/" class="button">вернуться на главную</a> {% if site.related_posts.size >= 1 %}
-        <div class="similar">
-            <h4>Похожие статьи
-              <!-- <span>({{ page.tags | array_to_sentence_string: "&nbsp;" }})</span> -->
-            </h4>
-            <ul>
-                {% for related_post in site.related_posts limit: 10 %}
-                <li>
-                    {{ related_post.date | date_to_string }}
-                    <a href="{{ related_post.url }}">{{ related_post.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
-    </div>
-    {% include footer.html class-bg=page.class-bg %}
-</body>
-
-</html>
+          </span> {% endfor %} {% endif %} </div>
+    {{ content }}
+    <a class="upper" href="/">Вернуться к списку</a>
+</div>

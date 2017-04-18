@@ -16,22 +16,14 @@
 </head>
 
 <body>
-        <div class="sidebar primary-bg">
-              <h3 class="shadow_text center">Горский дом</h3>
+    <div class="sidebar primary-bg">
+        <h3 class="shadow_text center">Горский дом</h3>
+    </div>
+    <div class="content">
+        <div class="container">
+            {{ content }}
         </div>
-        <div class="content">
-            <div class="container">
-                <h1 class="page-heading">События и Новости</h1>
-                <ul class="post-list">
-                    {% for post in site.posts %}
-                    <li><span class="post-meta">{{ post.date | date_to_string }}</span>
-                        <span> {{ post.categories }} </span>
-                        <h4><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h4> {{ post.excerpt | remove: '
-                        <p>' | remove: '</p>' }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+    </div>
     <!-- {% include footer.html class-bg="primary-bg" %} -->
 </body>
 

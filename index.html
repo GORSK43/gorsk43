@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h1 class="page-heading">События и Новости</h1>
+<ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-item">
+        <span class="date-only">{{ post.date | localize: "%d %B %Y" }}&nbsp;&nbsp;|&nbsp;&nbsp;{{ post.categories }} </span>
+        <h5><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h5> {{ post.excerpt | remove: '
+        <p>' | remove: '</p>' }}
+        <a href="{{ post.url | relative_url }}"><small>&nbsp;&nbsp;<em>далее . . .</em></small></a>
+    </li>
+    {% endfor %}
+</ul>
