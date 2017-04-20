@@ -6,7 +6,7 @@ layout: default
     {% for post in site.posts %}
     <li class="post-item">
         <span class="date-only">{{ post.date | localize: "%d %B %Y" }}
-         {% if post.categories %}&nbsp;&nbsp;|&nbsp;&nbsp;Категории: {% for cat in post.categories %}
+         {% if post.categories %}&nbsp;&nbsp;|&nbsp;&nbsp;{% for cat in post.categories %}
         <span>
           {% categorylink cat %}
           {{ cat }}&nbsp;

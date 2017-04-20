@@ -2,37 +2,54 @@
 ---
 
 @import 3d_text
+$link: #0489bf
 body
   letter-spacing: normal
   line-height: 1.55
   font-size: 1.6rem
-  color: #525252
+  color: #383838
 a
-  color: #18af8d
+  color: $link
   text-decoration: none
 ul
   list-style: none
+.content
+  width: 100%
+  margin-left: 0
 .sidebar
-  width: 25%
-  position: fixed
-  left: 0
-  top: 0
-  bottom: 0
+  width: 100%
+  position: relative
   li
     padding-top: 2rem
   a
     color: #eee
     &:hover
       color: white
+@media screen and (min-width: 768px)
+  .sidebar
+    width: 25%
+    padding-top: 3rem
+    position: fixed
+    left: 0
+    top: 0
+    bottom: 0
+  .content
+    width: 75%
+    margin-left: 25%
 .container
   width: 95%
-.content
-  width: 75%
-  margin-left: 25%
 .date-only
-  color: #a7a7a7
-  font-style: italic
+  color: #797979
   font-size: 1.5rem
+  a
+    color: white
+    background: #5d7570
+    padding: 0.35rem 0.8rem
+    border-radius: 0.75rem
+    text-transform: uppercase
+    font-size: 1.0rem
+    font-weight: 400
+    margin-right: 0.15rem
 .moss-bg
   background: #a73737
   background: -webkit-linear-gradient(to left, #a73737 , #7a2828)
