@@ -9,7 +9,7 @@ layout: default
          {% if post.categories %}&nbsp;&nbsp;|&nbsp;&nbsp;{% for cat in post.categories %}
         <span>
           {% categorylink cat %}
-          {{ cat }}&nbsp;
+          {{ cat }}
           {% endcategorylink %}
           </span> {% endfor %} {% endif %}</span>
         <h5><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h5> {{ post.excerpt | remove: '
