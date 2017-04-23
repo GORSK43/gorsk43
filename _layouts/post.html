@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="wrapper-post">
-    <h3>{{ page.title }}</h3>
+    <h3 class="post-main-header">{{ page.title }}</h3>
     <div class="date-only">
         {{ page.date | localize: "%d %B %Y" }} {% if page.categories %}&nbsp;|&nbsp; Категории: {% for cat in page.categories %}
         <span>
