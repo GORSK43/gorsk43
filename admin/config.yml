@@ -8,6 +8,10 @@ collections:
   - name: "posts"
     label: "Post"
     folder: "_posts"
-    fields:
-      - {label: "Language", name: "language"}
-
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
