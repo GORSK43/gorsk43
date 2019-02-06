@@ -8,4 +8,6 @@ collections:
   - name: "posts"
     label: "Post"
     folder: "_posts"
+    fields:
+      - {label: "Language", name: "language"}
 
